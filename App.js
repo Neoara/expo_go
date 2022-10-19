@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import AppNavigator from "./app/navigation/AppNavigator";
-import { StatusBar, View, Text } from "react-native";
+import { StatusBar} from "react-native";
 import React from "react";
 
 const App = () => {

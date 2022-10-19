@@ -1,7 +1,7 @@
 import React from 'react'
-import { Text, View, Button, StyleSheet, Alert } from 'react-native'
+import { View, Button, StyleSheet, Alert } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Login = ({ navigation }) => {
@@ -9,11 +9,11 @@ const Login = ({ navigation }) => {
 
   const login = async () => {
     if (loginName === '') {
-      Alert.alert('Attention!', 'Enter your login, please!')
+      Alert.alert('Attention!', 'Enter your name, please!')
     } else {
       try {
         await AsyncStorage.setItem('Users', loginName)
-        navigation.navigate('Casino')
+        navigation.navigate('Messenger')
       } catch (error) {
         console.log(error)
       }
